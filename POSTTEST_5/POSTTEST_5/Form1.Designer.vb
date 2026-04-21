@@ -38,15 +38,19 @@ Partial Class Form1
         Buttonubh = New Button()
         Buttonhps = New Button()
         Buttonbtl = New Button()
+        MenuStrip1 = New MenuStrip()
+        DataToolStripMenuItem = New ToolStripMenuItem()
+        RIncianHewanToolStripMenuItem = New ToolStripMenuItem()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(DGVHewan, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.images
-        PictureBox1.Location = New Point(481, 15)
+        PictureBox1.Location = New Point(481, 56)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(162, 140)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -56,36 +60,36 @@ Partial Class Form1
         ' DGVHewan
         ' 
         DGVHewan.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGVHewan.Location = New Point(-3, 226)
+        DGVHewan.Location = New Point(-3, 285)
         DGVHewan.Name = "DGVHewan"
         DGVHewan.RowHeadersWidth = 51
-        DGVHewan.Size = New Size(810, 233)
+        DGVHewan.Size = New Size(683, 174)
         DGVHewan.TabIndex = 1
         ' 
         ' TextBoxcari
         ' 
-        TextBoxcari.Location = New Point(147, 123)
+        TextBoxcari.Location = New Point(147, 164)
         TextBoxcari.Name = "TextBoxcari"
         TextBoxcari.Size = New Size(311, 27)
         TextBoxcari.TabIndex = 2
         ' 
         ' TextBoxjenis
         ' 
-        TextBoxjenis.Location = New Point(147, 86)
+        TextBoxjenis.Location = New Point(147, 127)
         TextBoxjenis.Name = "TextBoxjenis"
         TextBoxjenis.Size = New Size(311, 27)
         TextBoxjenis.TabIndex = 3
         ' 
         ' TextBoxkode
         ' 
-        TextBoxkode.Location = New Point(147, 15)
+        TextBoxkode.Location = New Point(147, 56)
         TextBoxkode.Name = "TextBoxkode"
         TextBoxkode.Size = New Size(311, 27)
         TextBoxkode.TabIndex = 4
         ' 
         ' TextBoxnmhwn
         ' 
-        TextBoxnmhwn.Location = New Point(147, 53)
+        TextBoxnmhwn.Location = New Point(147, 94)
         TextBoxnmhwn.Name = "TextBoxnmhwn"
         TextBoxnmhwn.Size = New Size(311, 27)
         TextBoxnmhwn.TabIndex = 5
@@ -93,7 +97,7 @@ Partial Class Form1
         ' Labelkdhwn
         ' 
         Labelkdhwn.AutoSize = True
-        Labelkdhwn.Location = New Point(25, 22)
+        Labelkdhwn.Location = New Point(25, 63)
         Labelkdhwn.Name = "Labelkdhwn"
         Labelkdhwn.Size = New Size(94, 20)
         Labelkdhwn.TabIndex = 6
@@ -102,7 +106,7 @@ Partial Class Form1
         ' Labelnmhwn
         ' 
         Labelnmhwn.AutoSize = True
-        Labelnmhwn.Location = New Point(25, 56)
+        Labelnmhwn.Location = New Point(25, 97)
         Labelnmhwn.Name = "Labelnmhwn"
         Labelnmhwn.Size = New Size(99, 20)
         Labelnmhwn.TabIndex = 7
@@ -111,7 +115,7 @@ Partial Class Form1
         ' Labeljnshwn
         ' 
         Labeljnshwn.AutoSize = True
-        Labeljnshwn.Location = New Point(25, 89)
+        Labeljnshwn.Location = New Point(25, 130)
         Labeljnshwn.Name = "Labeljnshwn"
         Labeljnshwn.Size = New Size(90, 20)
         Labeljnshwn.TabIndex = 8
@@ -120,7 +124,7 @@ Partial Class Form1
         ' labelsearch
         ' 
         labelsearch.AutoSize = True
-        labelsearch.Location = New Point(25, 126)
+        labelsearch.Location = New Point(25, 167)
         labelsearch.Name = "labelsearch"
         labelsearch.Size = New Size(85, 20)
         labelsearch.TabIndex = 9
@@ -132,7 +136,7 @@ Partial Class Form1
         ' 
         ' Buttonsmpn
         ' 
-        Buttonsmpn.Location = New Point(25, 191)
+        Buttonsmpn.Location = New Point(25, 232)
         Buttonsmpn.Name = "Buttonsmpn"
         Buttonsmpn.Size = New Size(94, 29)
         Buttonsmpn.TabIndex = 10
@@ -141,7 +145,7 @@ Partial Class Form1
         ' 
         ' Buttonubh
         ' 
-        Buttonubh.Location = New Point(178, 191)
+        Buttonubh.Location = New Point(178, 232)
         Buttonubh.Name = "Buttonubh"
         Buttonubh.Size = New Size(94, 29)
         Buttonubh.TabIndex = 11
@@ -150,7 +154,7 @@ Partial Class Form1
         ' 
         ' Buttonhps
         ' 
-        Buttonhps.Location = New Point(337, 191)
+        Buttonhps.Location = New Point(337, 232)
         Buttonhps.Name = "Buttonhps"
         Buttonhps.Size = New Size(94, 29)
         Buttonhps.TabIndex = 12
@@ -159,19 +163,42 @@ Partial Class Form1
         ' 
         ' Buttonbtl
         ' 
-        Buttonbtl.Location = New Point(502, 191)
+        Buttonbtl.Location = New Point(502, 232)
         Buttonbtl.Name = "Buttonbtl"
         Buttonbtl.Size = New Size(94, 29)
         Buttonbtl.TabIndex = 13
         Buttonbtl.Text = "Batal"
         Buttonbtl.UseVisualStyleBackColor = True
         ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
+        MenuStrip1.Items.AddRange(New ToolStripItem() {DataToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(671, 28)
+        MenuStrip1.TabIndex = 14
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' DataToolStripMenuItem
+        ' 
+        DataToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {RIncianHewanToolStripMenuItem})
+        DataToolStripMenuItem.Name = "DataToolStripMenuItem"
+        DataToolStripMenuItem.Size = New Size(55, 24)
+        DataToolStripMenuItem.Text = "Data"
+        ' 
+        ' RIncianHewanToolStripMenuItem
+        ' 
+        RIncianHewanToolStripMenuItem.Name = "RIncianHewanToolStripMenuItem"
+        RIncianHewanToolStripMenuItem.Size = New Size(224, 26)
+        RIncianHewanToolStripMenuItem.Text = "RIncian Hewan"
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Linen
-        ClientSize = New Size(666, 371)
+        ClientSize = New Size(671, 447)
         Controls.Add(Buttonbtl)
         Controls.Add(Buttonhps)
         Controls.Add(Buttonubh)
@@ -186,12 +213,16 @@ Partial Class Form1
         Controls.Add(TextBoxcari)
         Controls.Add(DGVHewan)
         Controls.Add(PictureBox1)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(DGVHewan, ComponentModel.ISupportInitialize).EndInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -211,5 +242,8 @@ Partial Class Form1
     Friend WithEvents Buttonhps As Button
     Friend WithEvents Buttonubh As Button
     Friend WithEvents Buttonsmpn As Button
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents DataToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RIncianHewanToolStripMenuItem As ToolStripMenuItem
 
 End Class

@@ -127,4 +127,8 @@
             DGVHewan.DataSource = SearchHewan(TextBoxcari.Text.Trim())
         End If
     End Sub
+
+    Private Sub RIncianHewanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RIncianHewanToolStripMenuItem.Click
+        Form2.Show()
+    End Sub
 End Class
